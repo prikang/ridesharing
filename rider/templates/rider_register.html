@@ -1,0 +1,22 @@
+{%extends 'layout.html'%}
+{%block content%}
+<h1>This is rider register page</h1>
+
+{% if messages %}
+{% for message in messages%}
+{{message}}
+{%endfor%}
+{%endif%}
+
+<form action="{% url 'save_rider_register'%}" method="post">
+  {%csrf_token%}
+  {{form}}
+  
+  <button type="submit">Submit</button>
+</form>
+
+
+{%endblock%}
+
+
+
