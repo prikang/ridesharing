@@ -42,8 +42,7 @@ class PassengerOnRideAPIView(APIView):
             rider=data.get("rider"),
             passenger=data.get("passenger")
         )
-        print(serializer.validated_data)
-        serializer.save()
+        
         return Response({"message":"Data saved"})
 
         
